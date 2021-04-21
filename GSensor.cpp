@@ -132,7 +132,7 @@ void GSensor::ADXL345_RegMultiRead(uint8_t address, uint8_t values[], uint8_t le
 }
 
 // Read acceleration data of all three axes
-//void GSensor::ADXL345_XYZ_Read(int16_t szData16[3] {
+//void GSensor::ADXL345_XYZ_Read(int16_t szData16[3], int16_t mg_per_lsb) {
 void GSensor::ADXL345_XYZ_Read(int16_t szData16[3]) {
     uint8_t szData8[6];
     ADXL345_RegMultiRead(0x32, (uint8_t*)&szData8, sizeof(szData8));
